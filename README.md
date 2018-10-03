@@ -9,3 +9,7 @@ well for one you have to have latitude and longitude being very precise and accu
 Improvements:
 
 Currently we are storing all the rules on a file, so the space complexity for the current algorithm is 0(n) since we are storing all the objects for each IP address in a list. We need all of those to compare with the current input so it would be hard to reduce that, however the current runtime of 0(n) can be improved signifcantly. Currently we are comparing the input distance to every rule. With many input requests, and as the file grows longer this isn't great performance. We can use sorting based on some distance metric and then binary search on the list to bring this down to 0{logn) or we can use a balanced binary tree with a comparision function that also uses somem sort of distance metric to find the closest previous IP address request. 
+
+Testing:
+In order to test the file, just change the IP address on the input file (this file should always only have 1 line). Then run the file by either opening it up in a text editor, or running the file as a script by calling python UnifyID.py from terminal.
+
